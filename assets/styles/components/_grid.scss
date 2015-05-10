@@ -7,4 +7,5 @@
 }
 .sidebar {
   @include make-sm-column($sidebar-sm-columns);
+  width: 16.67%!important
 }

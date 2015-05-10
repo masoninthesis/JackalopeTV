@@ -1,0 +1,142 @@
+/*----------------------
+  navbar (on scroll)
+  ----------------------*/
+
+.navbar-fixed {
+  position: fixed;
+  top: 0px;
+  z-index: 1030;
+  opacity: 0.98;
+}
+
+.body-top {
+  margin-bottom: 44px !important;
+}
+
+.form-after {
+  .btn-sub {
+    background: $brand-primary !important;
+    border: 1px solid $brand-primary !important;
+    color: #fff !important;
+  }
+}
+
+.btn-sub-mobile-js {
+  margin-top: -1px !important;
+}
+
+/*----------------------
+  navbar
+  ----------------------*/
+.nav-container {
+  max-width: 948px;
+  margin: 0 auto;
+  display: block;
+}
+
+.nav-sub {
+  float: right;
+}
+
+form {
+  margin-top: 8px;
+  font-family: 'Avenir';
+  font-weight: 300;
+}
+
+#form-before {
+  .twitter {
+    margin: 14px 14px 0 4px;
+  }
+
+  .facebook {
+    line-height: .7;
+  }
+  .nav-tablet .btn-sub {
+    background: #fff;
+    border: 1px solid $gray-light-ish;
+    color: $brand-primary;
+    padding-top: 8px;
+    line-height: 1.4;
+    margin-top: -1px;
+    /*hover {
+      .transition;
+      background: $brand-primary;
+      border: 1px solid $brand-primary;
+      color: #fff;
+    }*/
+  }
+}
+
+.form-control {
+  display: inline;
+  width: inherit;
+  border-radius: 6px;
+  /*.form-focus;*/
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  color: #bbb;
+  background: $gray-lightest;
+  font-weight: bold;
+  letter-spacing: 0.025em;
+  border-bottom: 1px solid $gray-lighter;
+  ul {
+    padding-right: 48px;
+  li {
+    display: inline-block;
+  }}
+}
+
+.nav-tablet {
+  display: none;
+  @media (min-width: $screen-sm-min) {
+    display: inline-block;
+  }
+}
+
+.nav-mobile {
+  display: inherit;
+  @media (min-width: $screen-sm-min) {
+    display: none;
+  }
+  .btn-sub-mobile {
+    float: right;
+    margin-top: 9px;
+    background: #fff;
+    border: 1px solid $gray-light-ish;
+    color: $brand-primary;
+    padding-top: 7px;
+    line-height: 1.4;
+  }
+}
+
+
+/*----------------------
+  hero
+  ----------------------*/
+#hero {
+  background: none;
+  margin-bottom: -10px; /* This is to compensate for some random empty space above the nav */
+  .btn {
+    margin-top: 12px;
+    float: left;
+    color: $brand-primary-light;
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid $brand-primary-light;
+    &:hover {
+      /*.transition;*/
+      color: $brand-primary-lighter;
+      border: 1px solid $brand-primary-lighter;
+    }
+  }
+  h1 {
+    padding-top: 24px;
+    color: $brand-primary;
+  }
+  h3 {
+    padding-bottom: 8px;
+  }
+}

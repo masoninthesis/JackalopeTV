@@ -28,3 +28,7 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
++// crops the featured image
++add_theme_support('post-thumbnails');
++add_image_size( 'featured-img-thumb', 860, 356, true ); // (cropped)
