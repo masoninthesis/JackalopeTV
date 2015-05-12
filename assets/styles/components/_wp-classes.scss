@@ -1,6 +1,13 @@
 // WordPress Generated Classes
 // http://codex.wordpress.org/CSS#WordPress_Generated_Classes
 
+// Media styles
+.wp-post-image {
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+}
+
 // Media alignment
 .alignnone {
   margin-left: 0;
@@ -43,7 +50,7 @@
 
 // Post Formats
 .format-standard {
-  
+
 }
 
 .format-aside {

@@ -18,44 +18,22 @@
     </div>
 </section>
 
+<!-- Featured Category -->
 <div class="wrap container">
   <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
-      <div class="row">
+    <?php query_posts('category_name=featured&showposts=3'); while (have_posts()) : the_post();?>
         <div class="col-sm-4 col-xs-12">
           <div class="thumbnail">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/place-holder.png" alt="<?php bloginfo('name'); ?>" alt="...">
-            <div class="caption">
-              <h3>Blog Post 1</h3>
-              <p>...</p>
-              <p><a href="#" class="btn btn-primary" role="button">Read More..</a></p>
-            </div>
+            <?php the_post_thumbnail( 'featured-img-thumb' ); ?>
+            <h3><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h3>
+            <?php get_template_part('templates/entry-meta'); ?>
+            <?php the_excerpt(); ?>
           </div>
         </div>
-        <div class="col-sm-4 col-xs-12">
-          <div class="thumbnail">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/place-holder.png" alt="<?php bloginfo('name'); ?>" alt="...">
-            <div class="caption">
-              <h3>Blog Post 2</h3>
-              <p>...</p>
-              <p><a href="#" class="btn btn-primary" role="button">Read More..</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 col-xs-12">
-          <div class="thumbnail">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/place-holder.png" alt="<?php bloginfo('name'); ?>" alt="...">
-            <div class="caption">
-              <h3>Blog Post 3</h3>
-              <p>...</p>
-              <p><a href="#" class="btn btn-primary" role="button">Read More..</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php endwhile; ?>
   </div>
 </div>
+<!-- //Featured Category -->
 
 <footer class="content-info" role="contentinfo">
   <div class="container">
